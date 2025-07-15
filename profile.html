@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - EMS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">EMS</div>
+    <ul class="navbar-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees.html">Employees</a></li>
+      <li><a href="tasks.html">Tasks</a></li>
+      <li><a href="attendance.html">Attendance</a></li>
+      <li><a href="leave.html">Leave</a></li>
+      <li><a href="profile.html"class="active">Profile</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="container profile-container">
+    <h1>My Profile</h1>
+    <div class="profile-box">
+      <div class="profile-pic">
+        <img src="https://i.pinimg.com/736x/ab/6c/7d/ab6c7d61f6b145356019b320fa613375.jpg" alt="Profile Photo" />
+      </div>
+      <div class="profile-info">
+        <label>Full Name</label>
+        <input type="text" value="Varad Garje" readonly />
+
+        <label>Email</label>
+        <input type="email" value="varadgarje@ez.com" readonly />
+
+        <label>Department</label>
+        <input type="text" value="Human Resources" readonly />
+
+        <label>Designation</label>
+        <input type="text" value="HR Manager" readonly />
+
+        <button class="edit-btn" onclick="toggleEdit()">Edit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleEdit() {
+      const inputs = document.querySelectorAll(".profile-info input");
+      const button = document.querySelector(".edit-btn");
+
+      if (button.textContent === "Edit") {
+        inputs.forEach(input => input.removeAttribute("readonly"));
+        button.textContent = "Save";
+      } else {
+        inputs.forEach(input => input.setAttribute("readonly", true));
+        button.textContent = "Edit";
+        alert("Profile saved (for demo, not persisted)");
+      }
+    }
+
+    function logout() {
+      alert("Logging out...");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "employee": "Neha Sharma",
+    "month": "July",
+    "present": 20,
+    "absent": 2
+  },
+  {
+    "employee": "Rohan Verma",
+    "month": "July",
+    "present": 18,
+    "absent": 4
+  }
+]

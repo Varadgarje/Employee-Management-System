@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employees - Employee Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    
+<!-- Employee Modal -->
+<div id="employeeModal" class="modal">
+  <div class="modal-content">
+    <h2 id="modalTitle">Add Employee</h2>
+    <form id="employeeForm">
+      <input type="hidden" id="rowIndex" />
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="position" placeholder="Position" required />
+      <input type="text" id="department" placeholder="Department" required />
+      <div class="modal-buttons">
+        <button type="submit">Save</button>
+        <button type="button" onclick="closeModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+  <nav class="navbar">
+    <div class="navbar-logo">EMS</div>
+    <ul class="navbar-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees.html" class="active">Employees</a></li>
+      <li><a href="tasks.html">Tasks</a></li>
+      <li><a href="attendance.html">Attendance</a></li>
+      <li><a href="leave.html">Leave</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+
+  <div class="employees-container">
+    <div class="header-row">
+      <h1>Employee List</h1>
+      <button class="add-btn">+ Add Employee</button>
+    </div>
+
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Position</th>
+          <th>Department</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Ravi Kumar</td>
+          <td>ravi.kumar@example.com</td>
+          <td>Developer</td>
+          <td>Engineering</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Neha Sharma</td>
+          <td>neha.sharma@example.com</td>
+          <td>UI/UX</td>
+          <td>Design</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Ramesh Jha</td>
+          <td>ramesh1jha@gmail.com</td>
+          <td>Data Analyst</td>
+          <td>Engineering</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Priya Verma</td>
+          <td>priya.23@gmail.com</td>
+          <td>Illustrator</td>
+          <td>Design</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Ritika Singh</td>
+          <td>ritika.s@gmail.com</td>
+          <td>Content Creator</td>
+          <td>Social Media</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function logout() {
+      window.location.href = "index.html";
+    }
+  </script>
+<script src="js/employees.js"></script>
+</body>
+</html>

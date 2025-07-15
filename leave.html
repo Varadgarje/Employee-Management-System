@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leave Requests - EMS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">EMS</div>
+    <ul class="navbar-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees.html">Employees</a></li>
+      <li><a href="tasks.html">Tasks</a></li>
+      <li><a href="attendance.html">Attendance</a></li>
+      <li><a href="leave.html"class="active">Leave</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="container">
+    <h1>Leave Requests</h1>
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Reason</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="leaveTableBody">
+        <!-- JS will populate this -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/leave.js"></script>
+</body>
+</html>

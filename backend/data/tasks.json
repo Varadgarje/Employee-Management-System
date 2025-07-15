@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Design Login Page",
+    "assignedTo": "Neha Sharma",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "title": "Fix navbar bug",
+    "assignedTo": "Rohan Verma",
+    "status": "Completed"
+  }
+]

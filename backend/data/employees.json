@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Neha Sharma",
+    "email": "neha@ems.com",
+    "department": "HR",
+    "designation": "HR Manager"
+  },
+  {
+    "id": 2,
+    "name": "Rohan Verma",
+    "email": "rohan@ems.com",
+    "department": "Tech",
+    "designation": "Developer"
+  }
+]

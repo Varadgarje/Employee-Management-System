@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance Summary - EMS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">EMS</div>
+    <ul class="navbar-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees.html">Employees</a></li>
+      <li><a href="tasks.html">Tasks</a></li>
+      <li><a href="attendance.html" class="active">Attendance</a></li>
+      <li><a href="leave.html">Leave</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="container">
+    <h1>Monthly Attendance Summary</h1>
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Present Days</th>
+          <th>Absent Days</th>
+          <th>Total Working Days</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceSummaryBody">
+        <!-- JS will populate rows -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/attendance.js"></script>
+</body>
+</html>
+
+

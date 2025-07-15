@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tasks - EMS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">EMS</div>
+    <ul class="navbar-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees.html">Employees</a></li>
+      <li><a href="tasks.html" class="active">Tasks</a></li>
+      <li><a href="attendance.html">Attendance</a></li>
+      <li><a href="leave.html">Leave</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+
+  <div class="container">
+    <h1>Task Manager</h1>
+    <button class="add-btn" id="addTaskBtn">+ Add Task</button>
+
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Assigned To</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="taskTableBody">
+        <!-- Dynamic rows go here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <h2 id="taskModalTitle">Add Task</h2>
+      <form id="taskForm">
+        <input type="hidden" id="taskIndex" />
+        <input type="text" id="taskTitle" placeholder="Task Title" required />
+        <input type="text" id="taskAssignee" placeholder="Assigned To" required />
+        <input type="date" id="taskDueDate" required />
+        <select id="taskStatus">
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <div class="modal-buttons">
+          <button type="submit">Save</button>
+          <button type="button" onclick="closeTaskModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/tasks.js"></script>
+</body>
+</html>
